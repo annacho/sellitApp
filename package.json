@@ -7,11 +7,16 @@
     "test": "jest",
     "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
   },
+  "rnpm":{
+  	"assets":[
+  		"./assets/Fonts"
+  	]
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "react": "16.6.1",
     "react-native": "0.57.6",
-    "react-native-navigation": "1.1.381",
+    "react-native-navigation": "^2.0.2641",
     "react-redux": "5.0.7",
     "redux": "3.7.2",
     "redux-promise": "0.5.3"

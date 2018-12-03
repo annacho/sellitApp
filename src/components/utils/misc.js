@@ -4,10 +4,10 @@ import {
   AsyncStorage
 } from 'react-native';
 
-export const APIKEY = `AIzaSyDAeiCvmEaZQE0tzI2tFUjOh3H2NEANAQc`;
+export const APIKEY = `X`;
 export const SIGNUP = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${APIKEY}`
 export const SIGNIN = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${APIKEY}`
-export const REFRESH = `xyxyxykey=${APIKEY}`
+export const REFRESH = `key=${APIKEY}`
 
 export const getOrientation = (value) => {
   return Dimensions.get("window").height > value ? "portrait" : "landscape"

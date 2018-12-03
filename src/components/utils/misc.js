@@ -1,6 +1,13 @@
 import {
-  Dimensions
+  Dimensions,
+  Platform,
+  AsyncStorage
 } from 'react-native';
+
+export const APIKEY = `AIzaSyDAeiCvmEaZQE0tzI2tFUjOh3H2NEANAQc`;
+export const SIGNUP = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${APIKEY}`
+export const SIGNIN = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${APIKEY}`
+export const REFRESH = `xyxyxykey=${APIKEY}`
 
 export const getOrientation = (value) => {
   return Dimensions.get("window").height > value ? "portrait" : "landscape"
@@ -12,4 +19,37 @@ export const setOrientationListener = (cb) => {
 
 export const removeOrientationListener = () => {
   return Dimensions.removeEventListener("change")
+}
+
+export const getPlatform = () => {
+  if(Platform.OS === 'ios'){
+    return "ios"
+  } else {
+    return "android"
+  }
+}
+
+export const getTokens = (cb) => {
+  AsyncStorage.multiGet([
+    '@sellitApp@token',
+    '@sellitApp@refreshToken',
+    '@sellitApp@expireToken',
+    '@sellitApp@uid',
+  ]).then((value)=>{
+    cb(value)
+  })
+}
+
+export const setTokens = (values,cb) => {
+  const dateNow = new Date();
+  const expiration = dateNow.getTime() + (3600 * 1000);
+
+  AsyncStorage.multiSet([
+    ['@sellitApp@token', values.token],
+    ['@sellitApp@refreshToken', values.refToken],
+    ['@sellitApp@expireToken', expiration.toString()],
+    ['@sellitApp@uid', values.uid],
+  ]).then( response => {
+    cb();
+  })
 }

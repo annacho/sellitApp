@@ -49,6 +49,12 @@ const LoadTabs = () => {
             leftButtons:[navLeftButton(sources)]
           }
         },
+        drawer:{
+          left:{
+            screen: "sellitApp.SidedrawerComponent",
+            fixedWidth:500
+          }
+        }
       ]
     })
   })

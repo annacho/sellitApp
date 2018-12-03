@@ -29,6 +29,12 @@ export const getPlatform = () => {
   }
 }
 
+export const navigatorDrawer = (event, $this) => {
+  if(event.type === "NavBarButtonPress" && event.id === "DrawerButton"){
+    # then we want to toggle the screen
+  }
+}
+
 export const getTokens = (cb) => {
   AsyncStorage.multiGet([
     '@sellitApp@token',

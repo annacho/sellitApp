@@ -4,6 +4,7 @@ import {
   AsyncStorage
 } from 'react-native';
 
+export const FIREBASEURL = 'X';
 export const APIKEY = `X`;
 export const SIGNUP = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${APIKEY}`
 export const SIGNIN = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${APIKEY}`
@@ -82,4 +83,28 @@ export const setTokens = (values,cb) => {
   ]).then( response => {
     cb();
   })
+}
+
+export const gridTwoColumns = (list) => {
+  let newArticles = [];
+  let articles = list;
+
+  let count = 1;
+  let vessel = {};
+
+  if(articles){
+    articles.forEach( element =>{
+      if(count == 1){
+        vessel["blockOne"] = element;
+        count++;
+      } else {
+        vessel["blockTwo"] = element;
+        newArticles.push(vessel);
+
+        count = 1;
+        vessel = {};
+      }
+    })
+  }
+  return newArticles;
 }

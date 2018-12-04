@@ -66,8 +66,22 @@ class Home extends Component {
     ))
   )
 
-  goToArticleHandler = () =>{
-    alert('go to')
+  goToArticleHandler = (props) =>{
+    this.props.navigator.push({
+      screen:"sellitApp.Article",
+      animationType:"slide-horizontal",
+      passProps:{
+        ArticleData: props
+      },
+      backButtonTitle:'Back to home',
+      navigatorStyle:{
+        navBarTextFontSize: 20,
+        navBarTextColor: '#ffffff',
+        navBarTextFontFamily: 'RobotoCondensed-Bold'
+        navBarBackgroundColor: '#00ADA9',
+        screenBackgroundColor: '#ffffff'
+      }
+    })
   }
 
   render() {

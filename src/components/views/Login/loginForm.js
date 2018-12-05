@@ -96,7 +96,8 @@ class LoginForm extends Component {
       this.setState({hasErrors:true})
     } else {
       setTokens(this.props.User.userData,()=>{
-        console.log('works')
+        this.setState({hasErrors:false});
+        LoadTabs(true);
       })
     }
   }
@@ -184,7 +185,7 @@ class LoginForm extends Component {
           <Button
             title="i'll do it later"
             color="lightgrey"
-            onPress={()=> LoadTabs()}
+            onPress={()=> LoadTabs(false)}
           />
         </View>
       </View>

@@ -1,7 +1,8 @@
 import {
   REGISTER_USER,
   SIGN_USER,
-  AUTO_SIGN_IN
+  AUTO_SIGN_IN,
+  GET_USER_POSTS
 } from '../types';
 
 import axios from 'axios';
@@ -76,5 +77,26 @@ export function autoSignIn(refToken){
   return {
     type: AUTO_SIGN_IN,
     payload: request
+  }
+}
+
+export function getUserPosts(){
+
+  const request = axios('${FIREBASEURL}/articles.json?orderBy=\"uid\"&equalTo=\"${UID}\"')
+      .then( response => {
+        let articles = [];
+
+        for(let key in response.data){
+          articles.push({
+            ...response.data[key],
+            id: key
+          })
+        }
+        return articles
+      })
+    return {
+      type: GET_USER_POSTS,
+      payload: request
+    }
   }
 }

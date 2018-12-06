@@ -1,0 +1,9 @@
+class.leftButtons	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  static navigatorButtons = {$/;"	property	line:5
+constructor	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  constructor(props){$/;"	function	line:16
+state.posts	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^    this.state = {$/;"	property	line:19
+componentDidMount	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentDidMount(){$/;"	function	line:34
+componentWillReceiveProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentWillReceiveProps(nextProps){$/;"	function	line:39
+render	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  render(){$/;"	function	line:84
+mapStateToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapStateToProps(state){$/;"	function	line:128
+mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:135
+mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:135

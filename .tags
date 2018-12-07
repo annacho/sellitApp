@@ -1,9 +1,14 @@
+switch	/Users/annacho/sellitApp/src/components/Store/reducers/user_reducer.js	/^  switch(action.type){$/;"	function	line:10
 class.leftButtons	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  static navigatorButtons = {$/;"	property	line:5
 constructor	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  constructor(props){$/;"	function	line:16
 state.posts	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^    this.state = {$/;"	property	line:19
-componentDidMount	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentDidMount(){$/;"	function	line:34
-componentWillReceiveProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentWillReceiveProps(nextProps){$/;"	function	line:39
-render	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  render(){$/;"	function	line:84
-mapStateToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapStateToProps(state){$/;"	function	line:128
-mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:135
-mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:135
+componentDidMount	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentDidMount(){$/;"	function	line:35
+componentWillReceiveProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  componentWillReceiveProps(nextProps){$/;"	function	line:40
+render	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^  render(){$/;"	function	line:135
+mapStateToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapStateToProps(state){$/;"	function	line:191
+mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:198
+mapDispatchToProps	/Users/annacho/sellitApp/src/components/views/Admin/UserPosts/index.js	/^function mapDispatchToProps(dispatch){$/;"	function	line:198
+signIn	/Users/annacho/sellitApp/src/components/Store/actions/user_actions.js	/^export function signIn(data){$/;"	function	line:13
+signUp	/Users/annacho/sellitApp/src/components/Store/actions/user_actions.js	/^export function signUp(data){$/;"	function	line:38
+autoSignIn	/Users/annacho/sellitApp/src/components/Store/actions/user_actions.js	/^export function autoSignIn(refToken){$/;"	function	line:63
+getUserPosts	/Users/annacho/sellitApp/src/components/Store/actions/user_actions.js	/^export function getUserPosts(){$/;"	function	line:85
